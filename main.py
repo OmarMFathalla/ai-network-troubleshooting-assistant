@@ -13,6 +13,8 @@ if "slow" in issue or "lagging" in issue:
     other_devices = input("Are other devices also slow? (yes/no): ").lower()
     if other_devices == "yes":
         print("This may indicate a router, modem, or internet service issue.")
+    elif other_devices == "no":
+        print("This may indicate a device-specific issue.")
 elif "disconnect" in issue or "dropping" in issue or "drops" in issue:
     print("Possible issue detected: Network connection is dropping.")
     print("Recommended action: Check signal strength and restart your router.")
