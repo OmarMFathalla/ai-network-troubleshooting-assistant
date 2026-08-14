@@ -1,5 +1,10 @@
-
-
+import subprocess
+def check_internet():
+    try:
+        subprocess.check_call(["ping", "-c", "1", "8.8.8.8"])
+        return True
+    except subprocess.CalledProcessError:
+        return False
 
 print("AI Network Troubleshooting Assistant")
 print("Running on my MacBook!")
@@ -27,3 +32,4 @@ elif "wifi" in issue or "wi-fi" in issue:
     print("Recommended action: Ensure you are connected to the correct Wi-Fi network and check the signal strength.")
 else:
     print("Issue not recognized. Please provide more details.")
+print(check_internet())
