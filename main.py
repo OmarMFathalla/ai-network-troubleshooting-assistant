@@ -2,6 +2,7 @@
 
 
 print("AI Network Troubleshooting Assistant")
+print("Running on my MacBook!")
 
 issue = input("What network problem are you experiencing? ").lower()
 
