@@ -22,5 +22,8 @@ elif "disconnect" in issue or "dropping" in issue or "drops" in issue:
 elif "no internet" in issue:
     print("Possible issue detected: No internet access.")
     print("Recommended action: Check your router lights and verify your internet service is online.")
+elif "wifi" in issue or "wi-fi" in issue:    
+    print("Possible issue detected: Wi-Fi connectivity problem.")
+    print("Recommended action: Ensure you are connected to the correct Wi-Fi network and check the signal strength.")
 else:
     print("Issue not recognized. Please provide more details.")
