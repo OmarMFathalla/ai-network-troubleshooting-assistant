@@ -32,4 +32,5 @@ elif "wifi" in issue or "wi-fi" in issue:
     print("Recommended action: Ensure you are connected to the correct Wi-Fi network and check the signal strength.")
 else:
     print("Issue not recognized. Please provide more details.")
-print(check_internet())
+if check_internet():
+    print("Internet connectivity confirmed.")
