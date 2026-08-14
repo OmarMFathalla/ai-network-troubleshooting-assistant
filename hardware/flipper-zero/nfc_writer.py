@@ -4,7 +4,7 @@ import re
 SOURCE = Path.home() / "OneDrive" / "Desktop" / "Blank213.nfc"
 OUTPUT = Path.home() / "OneDrive" / "Desktop" / "GitHub213.nfc"
 
-GITHUB_URL = "https://github.com/OmarMFathalla"
+TARGET_URL = input("Enter URL: ").strip()
 
 text = SOURCE.read_text(encoding="utf-8")
 
@@ -20,7 +20,7 @@ for line in text.splitlines():
 
 # Build a standard NDEF URI record.
 # URI prefix 0x04 means "https://"
-uri_body = "github.com/OmarMFathalla".encode("utf-8")
+uri_body = TARGET_URL.removeprefix("https://").encode("utf-8")
 
 ndef_record = bytes([
     0xD1,             # NDEF record header
@@ -69,4 +69,4 @@ print("Created:")
 print(OUTPUT)
 
 print("\nTarget URL:")
-print(GITHUB_URL)
+print(TARGET_URL)
